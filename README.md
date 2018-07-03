@@ -1,7 +1,6 @@
-[WhereYouLive](http://app.whereyoulive.co/)
-==========
+# [WhereYouLive](https://whereyoulive.herokuapp.com/)
 
-> http://app.whereyoulive.co/
+> https://whereyoulive.herokuapp.com/
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
@@ -22,7 +21,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ```sh
 # Dump the MongoLab DB
-mongodump -h ds041238.mongolab.com:41238 -d heroku_app35739427 -u <user> -p <pwd> -o <path to dump to>
+mongodump -h <host>:41238 -d <db> -u <user> -p <pwd> -o <path to dump to>
 # Start the local DB
 mkdir database
 mongod --dbpath database
@@ -38,18 +37,18 @@ The site is deployed on [Heroku](http://heroku.com/) and also uses the [MongoLab
 
 You'll also need to do some configuration beforehand:
 
-~~~sh
+```sh
 # First log in to Heroku.
 heroku login
 # Add the Heroku remote to the repository.
-heroku git:remote -r heroku -a a-new-home
+heroku git:remote -r heroku -a whereyoulive
 # Retrieve the deploy branch from GitHub.
 git fetch --all
-~~~
+```
 
 Then for each deploy:
 
-~~~sh
+```sh
 # Switch to the deploy branch.
 git checkout deploy
 # Rebase it from master.
@@ -60,14 +59,14 @@ git push origin deploy
 git push heroku deploy:master --force
 # Then see your thing running!
 heroku open
-~~~
+```
 
 ## Documentation
 
 For more information about using Node.js on Heroku, see these Dev Center articles:
 
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+-   [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+-   [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+-   [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+-   [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+-   [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
