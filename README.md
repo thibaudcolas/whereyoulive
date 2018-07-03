@@ -1,8 +1,6 @@
-# [WhereYouLive](https://whereyoulive.herokuapp.com/)
+# Where You Live
 
-> https://whereyoulive.herokuapp.com/
-
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+> A barebones Node.js app using [Express 4](http://expressjs.com/).
 
 This application support the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
